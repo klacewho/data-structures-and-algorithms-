@@ -41,7 +41,6 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
-  console.log(input, ' input');
   let reg = /\d/;
   return reg.test(input);
 };
@@ -56,7 +55,8 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-
+  let reg = /[A-Z]\w+/g;
+  return str.match(reg) || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
