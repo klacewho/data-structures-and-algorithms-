@@ -75,16 +75,13 @@ Write a function named sortByLength that takes in an array of strings and return
 const sortByLength = (arr) => {
   // Solution code here...
   arr.sort((a,b) => {
-    if (a.length < b.length){
-      return -1;
-    } else if ( a.length > b.length){
-      return 1;
-    } else {
-      return 0;
-    }
+    if(a.length < b.length) return -1;
+    if(a.length > b.length) return 1;
+    return 0;
   })
   return arr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
@@ -96,8 +93,14 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (arr) => {
   // Solution code here...
-  arr.sort();
-  console.log(arr);
+
+  arr.sort((a,b) => {
+    if(a.toLowerCase() < b.toLowerCase()) return -1;
+    if(a.toLowerCase() > b.toLowerCase()) return 1;
+    return 0;
+   })
+  return arr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -282,7 +285,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should sort items by their price', () => {
     expect(sortByPrice([
       {name: 'Sweatshirt', price: 45},
