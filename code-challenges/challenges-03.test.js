@@ -93,12 +93,14 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (arr) => {
   // Solution code here...
+
   arr.sort((a,b) => {
     if(a.toLowerCase() < b.toLowerCase()) return -1;
     if(a.toLowerCase() > b.toLowerCase()) return 1;
     return 0;
    })
   return arr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
