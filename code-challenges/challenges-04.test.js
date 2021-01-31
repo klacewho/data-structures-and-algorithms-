@@ -67,14 +67,15 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
-  let reg = /[A-J]w+]/;
-  let a = [];
+  const newArray = /^[A-J]\w+/;
+  const result =[];
   arr.forEach(city => {
-    if(a.test(city)){
-      a.push(city);
+    if(newArray.test(city)) {
+      result.push(city);
     }
+    //city.test will return true if cities are equal A-J.
   })
-  return a;
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
