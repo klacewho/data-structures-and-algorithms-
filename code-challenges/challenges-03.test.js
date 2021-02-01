@@ -137,6 +137,10 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
+  arr.sort((a,b) => {
+    return a.toString().length - b.toString().length
+  });
+  return arr;
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -159,6 +163,12 @@ const people = [
 
 const sortPeople = (arr) => {
   // Solution code here...
+  arr.sort((a,b) => {
+    if (a.lastName < b.lastName) return -1;
+    if (a.lastName > b.lastName) return 1;
+    return 0;
+  })
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -173,7 +183,7 @@ If two people have the same full name, the younger one should come first. Do not
 
 const sortPeopleBetter = (arr) => {
   // Solution code here...
-
+  console.log(arr);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -308,7 +318,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should sort numbers by their length', () => {
     expect(sortNumbersByLength([10, 2.8, 1, -47.75])).toStrictEqual([1, 10, 2.8, -47.75]);
     expect(sortNumbersByLength([100, 2.82, 1, -47.75])).toStrictEqual([1, 100, 2.82, -47.75]);
@@ -316,7 +326,7 @@ xdescribe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should sort people by their last names', () => {
     expect(sortPeople(people)).toStrictEqual([
       new Person('Casey', 'Codefellow', 38),
