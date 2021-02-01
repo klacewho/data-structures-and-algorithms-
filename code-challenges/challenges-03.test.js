@@ -137,7 +137,7 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
-  arr.sort(function(a,b){
+  arr.sort((a,b) => {
     return a.toString().length - b.toString().length
   });
   return arr;
@@ -163,6 +163,12 @@ const people = [
 
 const sortPeople = (arr) => {
   // Solution code here...
+  arr.sort((a,b) => {
+    if (a.lastName < b.lastName) return -1;
+    if (a.lastName > b.lastName) return 1;
+    return 0;
+  })
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -320,7 +326,7 @@ describe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should sort people by their last names', () => {
     expect(sortPeople(people)).toStrictEqual([
       new Person('Casey', 'Codefellow', 38),
