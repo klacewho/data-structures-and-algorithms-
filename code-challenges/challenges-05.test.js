@@ -90,11 +90,13 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
-  let z = [];
-  for (let i = 0; i < arr.length; i++){
-    z.push(arr.charAt(i));
-  }
-  return z;
+  // let z = [];
+  // for (let i = 0; i < arr.length; i++){
+  //   z.push(arr.charAt(i));
+  // }
+  // return z;
+  // ------ better yet
+  return arr.split('');
 };
 
 
