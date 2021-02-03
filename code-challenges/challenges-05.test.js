@@ -71,9 +71,13 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
-  // Solution code here...
-  return result;
+  let z = [];
+  for (let i = 0; i < str.length + 1; i++){
+    let a = str.substring(i);
+    z.push(a);
+  }
+  // console.log(z);
+  return z;
 };
 
 /* ------------------------------------------------------------------------------------------------
