@@ -144,8 +144,19 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   // Solution code here...
   let z = [];
-  console.log(recipe);
-
+  recipe.ingredients.forEach( str => {
+    let b = str.indexOf(' ');
+    // ------ this gets the index of that space.
+    str = str.slice(b + 1);
+    // ------- this slices on the space at the indexOf it...then adds one more index to slice off
+    b = str.indexOf(' ');
+    // ------- this repeats the process - gets the next indexOf the space
+    str = str.slice(b + 1);
+    // -------- same as - get the index of the space, now slice off 1 after the space
+    z.push(str);
+  });
+  return z;
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
