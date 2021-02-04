@@ -54,6 +54,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 
 const joinArray = (arr) => {
   // Solution code here...
+  return (arr.join(' '));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,9 +71,13 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
-  // Solution code here...
-  return result;
+  let z = [];
+  for (let i = 0; i < str.length + 1; i++){
+    let a = str.substring(i);
+    z.push(a);
+  }
+  // console.log(z);
+  return z;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,6 +90,13 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  // let z = [];
+  // for (let i = 0; i < arr.length; i++){
+  //   z.push(arr.charAt(i));
+  // }
+  // return z;
+  // ------ better yet
+  return arr.split('');
 };
 
 
@@ -130,10 +142,9 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let result = [];
   // Solution code here...
-  return result;
-};
+  let z = [];
+  console.log(recipe);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
