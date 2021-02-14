@@ -93,7 +93,7 @@ const checkValues = (obj, value) => {
   // Solution code here...
   if (obj.class === value){
     return true;
-  }
+  } else return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -117,6 +117,9 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
+  for (const [key, value] of Object.entries(obj)){
+    return (`'${key}: ${value}'`);
+  }
 };
 
 
