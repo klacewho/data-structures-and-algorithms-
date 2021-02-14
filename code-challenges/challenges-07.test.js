@@ -71,6 +71,8 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
+  // oh i did this the dry way from the start
+  return (arr.map(x => Math.pow(2, x)));
 };
 
 /* ------------------------------------------------------------------------------------------------
