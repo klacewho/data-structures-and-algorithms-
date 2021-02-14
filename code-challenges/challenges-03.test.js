@@ -78,7 +78,7 @@ const sortByLength = (arr) => {
     if(a.length < b.length) return -1;
     if(a.length > b.length) return 1;
     return 0;
-  })
+  });
   return arr;
 };
 
@@ -98,7 +98,7 @@ const alphabetizeBetter = (arr) => {
     if(a.toLowerCase() < b.toLowerCase()) return -1;
     if(a.toLowerCase() > b.toLowerCase()) return 1;
     return 0;
-   })
+  });
   return arr;
   //  test pushing
 };
@@ -121,8 +121,8 @@ const sortByPrice = (arr) => {
   arr.sort((a,b) => {
     if (a.price < b.price) return -1;
     if (a.price > b.price) return 1;
-    return 0; 
-  })
+    return 0;
+  });
   return arr;
   // console.log(arr);
 };

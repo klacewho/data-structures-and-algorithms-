@@ -56,6 +56,12 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
+  charArray.sort((a,b) => {
+    if (a.children < b.children) return -1;
+    if (a.children > b.children) return 1;
+    return 0;
+  });
+  return charArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,6 +91,7 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
+  console.log(obj);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -198,7 +205,7 @@ For example: [ { house: 'Stark', members: 6 }, { house: 'Arryn', members: 2 }, .
 const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
 
 const houseSurvivors = (arr) => {
-  const survivors = [];
+  const survivors = [];Values
   // Solution code here...
   return survivors;
 };
