@@ -91,7 +91,9 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
-  console.log(obj);
+  if (obj.class === value){
+    return true;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
