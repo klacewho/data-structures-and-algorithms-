@@ -24,7 +24,12 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
-};
+  arr.filter(x => {
+    if (x === 'bob'){
+      console.log(x);
+    }
+  })
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
