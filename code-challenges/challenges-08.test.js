@@ -8,7 +8,6 @@ Write a function named returnTen, takes in a string and uses split and splice to
 ------------------------------------------------------------------------------------------------ */
 
 function returnTen(str){
-  // Solution code here...
   let a = str.split('');
   let b = a.slice(a.length - 10);
   return b;
@@ -24,12 +23,9 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
-  arr.filter(x => {
-    if (x === 'bob'){
-      console.log(x);
-    }
-  })
-
+  let a = arr.filter(x => typeof x === 'number');
+  return(a);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
