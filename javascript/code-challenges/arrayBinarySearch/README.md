@@ -28,3 +28,5 @@ Function needs to take in 2 parameters - one is going to be a sorted array, and 
 
 <!-- Reference help from 
 https://medium.com/@pratikshya.pp19/binary-search-6d38365125b2 -->
+
+<!-- test test -->
