@@ -12,6 +12,30 @@ Define a method called toString (or __str__ in Python) which takes in no argumen
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+I don't know yet but I will shortly.
 
 ## API
 <!-- Description of each method publicly available to your Linked List -->
+I don't understand what this means yet.
+
+
+# Code Challenge 6 - Extending from Challenge 05
+
+Add the follows methods to the linked list from code challenge 05.
+
+## Challenge
+
+- .append(value) which adds a new node with the given value to the end of the list
+- .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+- .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+## Approach
+
+[Whiteboard]('linkedlist2whiteboard.png');
+
+## API
+
+<!-- Description of each method publicly available to your Linked List -->
+- append(Value) - this appends a node value at the end of the linked list.
+- insertBefore(value, newVal) - this inserts the new node before the selected value
+- insertAfter(value, newVal) - this inserts a new node after a selected node.

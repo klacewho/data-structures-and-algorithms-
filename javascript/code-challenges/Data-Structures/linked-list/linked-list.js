@@ -1,27 +1,26 @@
 class Node {
-    constructor(value){
-        this.value = value;
-        this.next = null;
-    }
+  constructor(value){
+    this.value = value;
+    this.next = null;
+  }
 }
 
 class LinkedList {
-    constructor(head = null){
-        this.head = head;
-        this.tail = null
+  constructor(head = null){
+    this.head = head;
+    this.length = 0;
+    this.tail = null
+  }
+  insert(data){
+    const makeNode = new Node(data);
+    if (this.head === null){
+      this.head = makeNode;
     }
-    insert(x){
-        const node = new Node (x);
-            if (!this.head){
-                this.head = node;
-            } else {
-                let a = this.head;
-
-                while (a.next){
-                    a = a.next;
-                }
-                a.next = node;
-            }
-            return this;
+  } else {
+    let current = this.head;
+    while (current.next){
+      current = current.next;
     }
-}
+    current.next = makeNode;
+  }
+};
