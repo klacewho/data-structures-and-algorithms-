@@ -13,3 +13,5 @@ if __name__ == '__main__':
     test1 = Node('test1')
     test2 = Node('test2')
 
+#
+# assert
